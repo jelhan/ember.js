@@ -67,8 +67,8 @@ const EmberRouter = EmberObject.extend(Evented, {
 
   _initRouterJs() {
     let routerMicrolib = (this._routerMicrolib = new Router());
+    this._isSetup = true;
     routerMicrolib.triggerEvent = triggerEvent.bind(this);
-
     routerMicrolib._triggerWillChangeContext = K;
     routerMicrolib._triggerWillLeave = K;
 
